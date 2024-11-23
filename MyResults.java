@@ -17,7 +17,7 @@ public class MyResults {
         System.out.println("");
         System.out.print("Masukan jumlah mahasiswa: ");
         jmlhM = fer.nextInt();
-        System.out.print("Masukan jumlah nilai/latihan: ");
+        System.out.print("Masukan jumlah nilai: ");
         jmlhL = fer.nextInt();
     
         nama = new String[jmlhM];
@@ -82,8 +82,14 @@ public class MyResults {
         
             System.out.println("Masukan nilai untuk " + nama[i] + ": ");
             for (int j = 0; j < jmlhL; j++) {
-                System.out.println("Nilai ke-" + (j + 1) + "; ");
-                nilai[i][j] = fer.nextFloat();
+                System.out.println("Nilai ke-" + (j + 1) + ": ");
+                float nilaiInput = fer.nextFloat();
+                while (nilaiInput < 0 || nilaiInput > 100) {
+                    System.out.println("Nilai tidak valid!!");
+                    System.out.println("Masukan ulang nilai ke-" + (j + 1) + ": ");
+                    nilaiInput = fer.nextFloat();
+                }
+                nilai[i][j] = nilaiInput;
             }
             System.out.println("----------------------------------------------");
         }

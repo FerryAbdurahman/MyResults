@@ -145,7 +145,7 @@ public class MyResults {
                 System.out.printf("Grade mahasiswa %s adalah A: Sangat baik\n", nama[i]);
                 System.out.println("---------------------------------------------");
             } else if (rata >= 68) {
-                System.out.printf("Grade mahasiswa %s adalah B: baik\n", nama[i]);
+                System.out.printf("Grade mahasiswa %s adalah B: Baik\n", nama[i]);
                 System.out.println("---------------------------------------------");
             } else if (rata >= 56) {
                 System.out.printf("Grade mahasiswa %s adalah C: Cukup\n", nama[i]);
